@@ -1,6 +1,5 @@
 ---
 title: Projects
-aside: true
 ---
 
 # Emmanuel College
