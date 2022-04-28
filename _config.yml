@@ -126,12 +126,7 @@ navigation_header:
   url: /projects/
 - title: Blog
   url: /blog/
-- title: Categories
-  url: /categories/
-- title: Search
-  url: /search/
-- title: Fork Alembic
-  url: https://github.com/daviddarnes/alembic
+
 
 navigation_footer:
 - title: This theme was creayed byDavid Darnes
