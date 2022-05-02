@@ -1,6 +1,6 @@
 
 # Clustering Extenstions 
-#### Project by Joanna Walsh and Timothy Hedspeth 
+#### Project by Joanna Walsh and Timothy Hedspeth for PHP 2650
 
 
 ## What is clustering? 
