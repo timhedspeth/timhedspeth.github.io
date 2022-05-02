@@ -1,5 +1,6 @@
 
 # Clustering Extenstions 
+#### Project by Joanna Walsh and Timothy Hedspeth 
 
 
 ## What is clustering? 
