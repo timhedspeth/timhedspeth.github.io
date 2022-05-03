@@ -26,6 +26,7 @@ In general clustering looks at "hard" boundaries between the subgroups that are 
 
 
 ## How do we implement these methods? 
+We use gray scale, 
 For this project we apply the clustering methods that are discussed above to image data for both animals and medical imaging. The [R file] is attached here for refrence in case anyone wants to follow the code to get a more speifific idea of what we do 
 
 
