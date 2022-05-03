@@ -22,7 +22,7 @@ Clustering is a general technique in statistical learning, where we are trying t
 
 
 ### Fuzzy c-means clustering 
-What is this algorithim? 
+In general clustering looks at "hard" boundaries between the subgroups that are found (i.e. data only belongs to a single cluster) (Bezdeck & Ehrlich & Full, 1983). In fuzzy clustering we consider something called a memmbership function which allows for data to be assigned to different clusters with different levels of membership. 
 
 
 ## How do we implement these methods? 
