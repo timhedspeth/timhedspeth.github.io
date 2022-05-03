@@ -1,10 +1,13 @@
 
-# Clustering Extenstions 
+---
+title = "Clustering"
+---
+
 #### Project by Joanna Walsh and Timothy Hedspeth for PHP 2650
 
 
 ## What is clustering? 
-Clustering is a general technique in statistical learning, where we are trying to identify clusters (subgroups) in our data. These clusters are groups that are partitions of the input data where membership in clusters are associated with similarity between the observations that are assigned to 
+Clustering is a general technique in statistical learning, where we are trying to identify clusters (subgroups) in our data. A clustering algorithim takes in unlabeled data, making it an unsupervised learning technique. These clusters are groups that are partitions of the input data where membership in clusters are associated with similarity between the observations that are in a cluster. This technique allows for us to capture grouping that seem natural such as finding grouping of hand written digits based on the value of the pixel, groups of pictures of different people (all photographed many times) to capture groups where the same indvidual is identified in a cluster, etc. There are many applications of clustering that extend beyond these basic examples. We extend our knoweldge of clustering to examine the process of image segmentation. 
 
 ## What is image segmentation?
 
@@ -19,7 +22,7 @@ Clustering is a general technique in statistical learning, where we are trying t
 
 
 ### Fuzzy c-means clustering 
-Fuzzy c-means clustering 
+What is this algorithim? 
 
 
 ## How do we implement these methods? 
@@ -29,4 +32,8 @@ For this project we apply the clustering methods that are discussed above to ima
 
 ##### Refrences 
 
+Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy c-means clustering algorithm." Computers & geosciences 10.2-3 (1984): 191-203. 
+
 Chuang, Keh-Shih, et al. "Fuzzy c-means clustering with spatial information for image segmentation." computerized medical imaging and graphics 30.1 (2006): 9-15.
+
+
