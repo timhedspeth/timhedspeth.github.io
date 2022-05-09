@@ -1,6 +1,8 @@
 
 ---
+
 title = "Clustering"
+
 ---
 
 #### Project by Joanna Walsh and Timothy Hedspeth for PHP 2650
