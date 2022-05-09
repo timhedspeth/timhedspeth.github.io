@@ -10,7 +10,7 @@ title = "Clustering"
 Clustering is a general technique in statistical learning, where we are trying to identify clusters (subgroups) in our data. A clustering algorithim takes in unlabeled data, making it an unsupervised learning technique. These clusters are groups that are partitions of the input data where membership in clusters are associated with similarity between the observations that are in a cluster. This technique allows for us to capture grouping that seem natural such as finding grouping of hand written digits based on the value of the pixel, groups of pictures of different people (all photographed many times) to capture groups where the same indvidual is identified in a cluster, etc. There are many applications of clustering that extend beyond these basic examples. We extend our knoweldge of clustering to examine the process of image segmentation. 
 
 ## What is image segmentation?
-
+When we look at a picture we are able to instantly reckognize the distnict entities in an image wheter it be a person, a blotch on a meidcal image, a plane in the sky. But this process is not so simple for a clustering algorithim, these algorihtims take in the data at the pixel level of the image and try to learn the patterns. Image segmentation is the process in which we are trying to learn things about an image, namely what objects present in the image (Zhang). The field of image segmentation is incredibly important and contains many algorithoms and is constantly being furthered, especially as its so importnat for medical imaging. 
 
 ## How does clustering apply to images 
 
@@ -37,4 +37,7 @@ Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy c-means clus
 
 Chuang, Keh-Shih, et al. "Fuzzy c-means clustering with spatial information for image segmentation." computerized medical imaging and graphics 30.1 (2006): 9-15.
 
+Dhanachandra, Nameirakpam, Khumanthem Manglem, and Yambem Jina Chanu. "Image segmentation using K-means clustering algorithm and subtractive clustering algorithm." Procedia Computer Science 54 (2015): 764-771.
 
+A SURVEY O N EVALUATION METHODS FOR
+IMAGE SEGMENTATION Zhang 
