@@ -14,7 +14,9 @@ Clustering is a general technique in statistical learning, where we are trying t
 ## What is image segmentation?
 When we look at a picture we are able to instantly reckognize the distnict entities in an image wheter it be a person, a blotch on a meidcal image, a plane in the sky. But this process is not so simple for a clustering algorithim, these algorihtims take in the data at the pixel level of the image and try to learn the patterns. Image segmentation is the process in which we are trying to learn things about an image, namely what objects present in the image (Zhang). The field of image segmentation is incredibly important and contains many algorithoms and is constantly being furthered, especially as its so importnat for medical imaging. 
 
-## How does clustering apply to images 
+<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+
+
 
 ## Algorithims we can use for image segmentation. 
 ### K-means clustering 
@@ -33,7 +35,7 @@ For this project we apply the clustering methods that are discussed above to ima
 
 
 
-##### Refrences 
+#### Refrences 
 
 Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy c-means clustering algorithm." Computers & geosciences 10.2-3 (1984): 191-203. 
 
