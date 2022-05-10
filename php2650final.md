@@ -30,7 +30,7 @@ Image segmentation is a rather difficult task, as methods for segmentation perfo
 K-means is a hard clustering algorithhim (Dass & Devi) 
 
 ### Spectral clustering 
-
+ 
 
 ### Fuzzy c-means clustering 
 In general clustering looks at "hard" boundaries between the subgroups that are found (i.e. data only belongs to a single cluster) (Bezdeck & Ehrlich & Full, 1983). In fuzzy clustering we consider something called a memmbership function which allows for data to be assigned to different clusters with different levels of membership (chuang). This is an important distinction between other clustering algroithims, as the nebighoring pixels in an image are highly correlated, so the information in surrounding pixels can be important in forming clusters. 
