@@ -18,14 +18,16 @@ Image segmetation at the base level, is when a machine is tryin learn and extrac
 
 ![image](https://user-images.githubusercontent.com/71342657/167689885-0e5e1a24-193a-482e-85f7-95ad033f2119.png)
 
-In the first image we can clearly see that Birman, the siammese cat, is sitting in a beautiful bed of grass. On the contrary in the second image we see a CT scan of the Opharanx (a part of the throat). In both of these images we are able to observe disticit objects birman and the grassy background, though we may not be able to note what parts of the Ophranx are shown (and which regions are indicative of 
+In the first image we can clearly see that Birman, the siammese cat, is sitting in a beautiful bed of grass. On the contrary in the second image we see a CT scan of the Opharanx (a part of the throat). In both of these images we are able to observe disticit objects birman and the grassy background, though we may not be able to note what parts of the Ophranx are shown (and which regions are indicative of potential concern), things that we take forgranted are not as easy for a computer (Dass & Devi). Computers must learn this information, through a series of steps, the first of which is the segmetation of these images into distinict groups, which is done through clustering (Dass & Devi). These images present unique challenges to a computer. 
+
+Image segmentation is a rather difficult task, as methods for segmentation perform 
 
 
 
 
 ## Algorithims we can use for image segmentation. 
 ### K-means clustering 
-
+K-means is a hard clustering algorithhim (Dass & Devi) 
 
 ### Spectral clustering 
 
