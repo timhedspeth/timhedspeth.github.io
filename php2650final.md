@@ -1,6 +1,5 @@
 ---
 title = "Clustering"
-data = NULL
 ---
 
 #### Project by Joanna Walsh and Timothy Hedspeth for PHP 2650
@@ -25,7 +24,7 @@ Clustering these images present unique challenges, as different images present d
 
 ## What are these algorithims and how do they perform? 
 ### k-means clustering 
-One of the most common clustering algorithims k-means, in which the algorithim is trying to classify pixels into k distinict clusters (Dhanachandra et al). To segment images with this technique consier <img src="https://render.githubusercontent.com/render/math?mathp=p(x,y)"> to be input pixels to be clustered with <img src="https://render.githubusercontent.com/render/math?math=c_k"> cluster centers. For the pixels we want to minimize the objective function <img src="https://render.githubusercontent.com/render/math?math=d=||p(x,y)-c_k||"> and assign pixels to the closest cluster in terms of distance. With the pixels assigned to thier new cluster   This algoorithim attempts to minimize the eculidian distance between pixels in a single cluster and reculauate the center using the formula <img src="https://render.githubusercontent.com/render/math?math=c_k=\frac{1}{k}\sum_{y\in c_k}\sum_{x\in c_k} p(x,y)"> (Dhanachandra et al).  
+One of the most common clustering algorithims k-means, in which the algorithim is trying to classify pixels into k distinict clusters (Dhanachandra et al). To segment images with this technique consier <img src="https://render.githubusercontent.com/render/math?math=p=p(x,y)"> to be input pixels to be clustered with <img src="https://render.githubusercontent.com/render/math?math=c_k"> cluster centers. For the pixels we want to minimize the objective function <img src="https://render.githubusercontent.com/render/math?math=d=||p(x,y)-c_k||"> and assign pixels to the closest cluster in terms of distance. With the pixels assigned to thier new cluster   This algoorithim attempts to minimize the eculidian distance between pixels in a single cluster and reculauate the center using the formula <img src="https://render.githubusercontent.com/render/math?math=c_k=\frac{1}{k}\sum_{y\in c_k}\sum_{x\in c_k} p(x,y)"> (Dhanachandra et al).  
 
 In addition k-means is a hard clustering algorithhim, as it assigns pixels into a single cluster (Dass & Devi).  This means that once a pixel is assigned to a cluster it cannot gain membership to other clusters (Dass & Devi). Given the random nature 
 
