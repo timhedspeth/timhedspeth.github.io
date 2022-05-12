@@ -1,7 +1,6 @@
 ---
-
 title = "Clustering"
-
+data = NULL
 ---
 
 #### Project by Joanna Walsh and Timothy Hedspeth for PHP 2650
