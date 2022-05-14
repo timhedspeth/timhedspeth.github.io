@@ -161,7 +161,9 @@ Landgraf, Andrew. “Unsupervised Image Segmentation with Spectral Clustering
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r-bloggers
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .com/2012/02/unsupervised-image-segmentation-with-spectral-clustering-with-r/. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .com/2012/02/unsupervised-image-segmentation-with-spectral-clustering
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -with-r/. 
 
 
 Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatialspectral clustering for image 
