@@ -160,7 +160,9 @@ Suryanarayana, S. V., G. Venkateswara Rao, and G. Veereswara Swamy. "A Survey: S
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are-different-types 
 
-Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral clustering for image segmentation." Pattern Recognition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  43.12 (2010): 4069-4076.
+Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral clustering for image segmentation." Pattern 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recognition 43.12 (2010): 4069-4076.
 
 “Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r
 
