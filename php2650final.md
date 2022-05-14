@@ -14,7 +14,8 @@ Image segmentation, at a basic level, is when a machine tries to learn and extra
 Figure 1. Image of Birman (Parkhi et al.) 
 <img width="237" alt="Screen Shot 2022-05-14 at 2 24 29 PM" src="https://user-images.githubusercontent.com/71342657/168448726-83d235ed-d734-45db-a92d-0f2da8d04f0e.png">
 Figure 2. Image of boxer (Parkhi et al.) 
-![brain](https://user-images.githubusercontent.com/71342657/168448730-c0b963fb-a58c-4cbd-86e5-3425d1aa7d60.jpg)
+
+<img width="300" alt="brain copy" src="https://user-images.githubusercontent.com/71342657/168449428-17ba6136-154d-4356-9ee8-1912501c7153.png">
 Figure 3. Image of brain from MRI (T2-Weighted MRI )
 
 
@@ -26,7 +27,7 @@ In the next sections, we will detail how these different clustering techniques a
 
 
 ### Explanation of algorithms
-###### K-means clustering
+##### K-means clustering
 One of the most common clustering algorithms is k-means, which is an algorithm that attempts to classify pixels into k distinct (non-overlapping) clusters (Dhanachandra et al). To segment an image with this technique, consider <img src="https://render.githubusercontent.com/render/math?math=p=p(x,y)"> to be input pixels to be clustered with <img src="https://render.githubusercontent.com/render/math?math=c_k"> cluster centers (Dhanachandra et al). When clustering the image, we aim to minimize the objective function <img src="https://render.githubusercontent.com/render/math?math=d=||p(x,y)-c_k||">, which essentially means minimizing the differences between pixels in the same group. This is done by first randomly assigning k pixels to represent the centers of the k groups, and then assigning the rest of the pixels to the cluster center that they are closest to in terms of euclidean distance (Dhanachandra, et al). Once the pixels are assigned to the clusters, this algorithm then attempts to minimize the euclidean distance between pixels in a single cluster by recalculating the centers using the formula  <img src="https://render.githubusercontent.com/render/math?math=c_k=\frac{1}{k}\sum_{y\in c_k}\sum_{x\in c_k} p(x,y)"> (Dhanachandra et al). The algorithm keeps doing this until the centers converge (stop changing/updating).
 
 One of the largest pitfalls of this algorithm is that the user must pre-specify the number of clusters k, before clustering (Norouzi, et al.). Also, given the random nature of the initialized center of the prespecified clusters, this method does not always perform optimally (Norouzi, et al.). Moreover, this clustering algorithm is also sensitive to outliers and noise in the data, and there is active, ongoing research aiming to alleviate these issues with modified k-means algorithms (Norouzi, et al.). Though this method does suffer from these pitfalls, it is a very efficient and relatively fast algorithm. For example, when different clustering methods were applied to MRI image data, it was observed that the computation time for k-means was 1.875 seconds, whereas Fuzzy C-Means took up to 56 seconds (Vijay and Subhashini)! In a review of published literature pertaining to image segmentation of breast cancer, researchers found that k-means was able to identify breast tumors with high accuracy (73%) at a speed much faster than most algorithms (Hassan, et al.).  
@@ -46,7 +47,7 @@ Fuzzy C-Means has been proven to perform well for medical data and even for imag
 
 
 ### Application to images 
-###### K-means applications
+##### K-means applications
 In all of the algorithms (spoiler alert) that we use as demonstrations in this post, we must select a number of clusters that we want to segment our images into. Examining Figure 1, it is noted that we would like to extract a cluster that contains Birman and possibly clusters that segment the background into the different gradients of grass that are observed, so we set the number of clusters to be 3. For the picture of the boxer in Figure 2, we note that there is a stark amount of contrast between the dog and the snow that surrounds him, so we set the number of clusters to be 2. Lastly is Figure 3, the image of the brain: given the heterogeneity in this image, we expect that a higher number of clusters would better capture the complexities of this image, so we select the number of clusters to be 5. 
 
 <img width="289" alt="Screen Shot 2022-05-13 at 8 43 16 PM" src="https://user-images.githubusercontent.com/71342657/168449127-40c8f5c6-723e-4fd1-9bfc-36b6263a8838.png">
@@ -58,6 +59,7 @@ Figure 4. Result of k-means clustering on Figure 1 (Birman)
 Figure 5. Result of k-means clustering on Figure 2 (Boxer) 
 
 ![Screen Shot 2022-05-13 at 8 44 30 PM](https://user-images.githubusercontent.com/71342657/168449223-c53020fa-f3bf-4d4c-abd9-3031131e4e01.png)
+
 Figure 6. Result of k-means clustering on Figure 3 (Brain MRI) 
 
 
@@ -69,7 +71,7 @@ We look at the resulting clusters from applying k-means to our three images and 
 Figure 7. Results of k-means when only 2 clusters are used on Figure 3
 
 
-###### Spectral applications 
+#### Spectral applications 
 
 ![Screen Shot 2022-05-14 at 5 56 12 PM](https://user-images.githubusercontent.com/71342657/168449304-56a731fa-d685-402f-90d6-831107777a6b.png)
 
@@ -78,6 +80,7 @@ Figure 8. Result of spectral clustering on Figure 1 (Birman)
 <img width="309" alt="Screen Shot 2022-05-14 at 5 55 28 PM" src="https://user-images.githubusercontent.com/71342657/168449287-38aca27e-6975-4b9c-a1e4-0ccdbfc38402.png">
 
 Figure 9. Result of spectral clustering on Figure 2 (Boxer) 
+
 <img width="303" alt="Screen Shot 2022-05-14 at 5 56 49 PM" src="https://user-images.githubusercontent.com/71342657/168449320-46eec781-4118-4e95-80c5-3047398af94a.png">
 
 Figure 10. Result of spectral clustering on Figure 3 (Brain MRI) 
@@ -86,7 +89,7 @@ Figure 10. Result of spectral clustering on Figure 3 (Brain MRI)
 
 In the clustering results above, we can see that the spectral clustering method performs relatively well for our friend Birman, shown in Figure 8, as it captures most of Birman in the foreground, and finds two clusters that constitute the background. We note that this is likely due to the intensity of the pixels for the background (and the upper part of his face) are significantly different than the rest of his body. The middle region of his body does not get clustered with the background, likely due to the fact that these pixels are in the neighborhood of the much lighter (and thus less intense pixels).  The spectral clustering algorithm also efficiently clusters the Boxer picture, shown in Figure 9, into a dog and a background. However, spectral clustering, when applied to the MRI image of the brain, forms clusters that do not capture the represented image at all, shown in Figure 10. This is likely the opposite of what we are observing with birman: the intensity of the pixels is likely to be similar, which leads to the algorithm performing significantly worse than k-means.     
 
-##### Fuzzy C-means application 
+#### Fuzzy C-means application 
 
 <img width="895" alt="Screen Shot 2022-05-13 at 8 57 32 PM" src="https://user-images.githubusercontent.com/71342657/168449336-a0f06bc4-fb23-4cc6-9090-467b99ff184a.png">
 
