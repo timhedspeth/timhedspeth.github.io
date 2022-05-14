@@ -54,6 +54,7 @@ Fuzzy c-means allows for us to explore noisey images, but only assigns the proba
 ## How do we implement these methods? 
 For this project we apply the clustering methods that are discussed above to image data for both animals and medical imaging. The [R file] is attached here for refrence in case anyone wants to follow the code to get a more speifific idea of what we do in the code. The segmented images shown above were derived by the code we implemented, and if you want to see it for yourself check out our [shiny app](https://timhedspeth1.shinyapps.io/image_segmentation/).
 
+The [R file](function.R)
 
 
 #### Refrences 
