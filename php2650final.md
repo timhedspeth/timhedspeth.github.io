@@ -11,8 +11,11 @@ Clustering is a general technique in statistical learning in which one tries to 
 Image segmentation, at a basic level, is when a machine tries to learn and extract different parts of an image, a crucial step in image processing (Dass et al.). What does this practically mean, though? Us humans (that are able to see) can look at an image and clearly identify the distinct objects that are present. Take the images below as an example: 
 
 <img width="459" alt="Screen Shot 2022-05-14 at 1 58 42 PM" src="https://user-images.githubusercontent.com/71342657/168448718-37e9e065-410a-497a-8bc6-9e0e57c6c5cd.png">
+
 Figure 1. Image of Birman (Parkhi et al.) 
+
 <img width="237" alt="Screen Shot 2022-05-14 at 2 24 29 PM" src="https://user-images.githubusercontent.com/71342657/168448726-83d235ed-d734-45db-a92d-0f2da8d04f0e.png">
+
 Figure 2. Image of boxer (Parkhi et al.) 
 
 <img width="300" alt="brain copy" src="https://user-images.githubusercontent.com/71342657/168449428-17ba6136-154d-4356-9ee8-1912501c7153.png">
@@ -112,7 +115,7 @@ Above, we discussed three different algorithms, k-means, spectral clustering, an
 ### Application and discussion
 Now that you have an understanding of the algorithms as well as their strengths and weaknesses, you can check out our [shiny app](https://timhedspeth1.shinyapps.io/imagesegmentationproject/). In this app, you can select from some existing examples or even upload your own image to see how these algorithms perform! You can also play with changing the number of clusters or the tuning parameter and neighborhood distance parameters in the spectral clustering algorithm to see how these affect the results. The [R file](function.R), containing the code used for the shiny app, is available to download here, for the sake of reproducibility!
 
-                                                           Works Cited 
+                                                 Works Cited 
 
 Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy c-means clustering algorithm." Computers & geosciences 10.2-3
 
