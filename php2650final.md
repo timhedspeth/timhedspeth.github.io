@@ -142,7 +142,7 @@ Hassan, Noor Salah, et al. "Medical Images Breast Cancer Segmentation Based on K
 
 Lalitha, M., M. Kiruthiga, and C. Loganathan. "A survey on image segmentation through clustering algorithm." International Journal of
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Science and Research 2.2 (2013): 348-358. Landgraf, Andrew. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Science and Research 2.2 (2013): 348-358. 
   
 Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatialspectral clustering for image segmentation." Neurocomputing 74.1-3 (2010): 461-471.
 
