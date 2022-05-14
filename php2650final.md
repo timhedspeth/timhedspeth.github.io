@@ -19,6 +19,7 @@ Figure 1. Image of Birman (Parkhi et al.)
 Figure 2. Image of boxer (Parkhi et al.) 
 
 <img width="300" alt="brain copy" src="https://user-images.githubusercontent.com/71342657/168449428-17ba6136-154d-4356-9ee8-1912501c7153.png">
+
 Figure 3. Image of brain from MRI (T2-Weighted MRI )
 
 
@@ -44,7 +45,7 @@ The degree of the weights, used to form the diagonal nxn degree matrix, D, are c
 Though this method can be used to perform clustering well, it is more complicated than k-means and thus more computationally expensive, as the size of the Laplacian matrix is n x n, which makes the computation of eigenvectors and eigenvalues very costly in terms of efficiency (Tung et al.). This computational burden can be reduced by only calculating each pixel’s similarity to other pixels in a small neighborhood and setting all other similarity values to zero, as previously described. But, for large enough images, this adjustment may not be enough, and the size of the image still presents a problem (Tung et al.). In order to further increase efficiency, one can reduce the size of the image, making it more pixelated but resulting in a much faster algorithm (in our examples, we decrease the dimensions of the image by a factor of 10 by averaging pixel values, as suggested in other implementations online (Landgraf). Again, computation time for images with spectral clustering is a general problem, but by reducing the size of the image in the way described above and only calculating similarity for a small neighborhood around each pixel, the algorithm is feasible. This algorithm is sensitive to noise and distortions that are present in the pixels of an image, because spectral clustering learns within regions that are often homogenous in their color, intensity, and texture and different from surrounding regions (Liu et al.). Current research on spectral clustering aims to extend the algorithm to help with its sensitivity to such noise (Liu et al.). Importantly, spectral clustering has the ability to capture clusters that are of different shapes and is generally able to find the globally optimal solution (Zhang et al.).     
 
 ##### Fuzzy C-means clustering
-In general, clustering looks at "hard" boundaries between the subgroups, which means that pixels are only allowed to belong to a single cluster (Bezdeck et. al.). In fuzzy clustering we extend our definition of clustering to include a membership function, which allows for pixels to be assigned to different clusters with different probabilities (Chuang et al.). This is different from most other clustering algorithms, as spectral clustering and k-means use hard boundaries (Chuang et al.). The use of fuzzy c-means can be helpful, as the algorithm yields the probability that pixels belong to a given cluster, so we can observe the likelihood of pixels being classified into a given cluster  (Chuang et al.).  We have  <img src="https://render.githubusercontent.com/render/math?math=X=(x_1,...,x_N)">, where <img src="https://render.githubusercontent.com/render/math?math=J=N"> is the number of pixels to be partitioned and c is the number of clusters (Chuang et al.). The algorithm performs optimization by minimizing the objective function <img src="https://render.githubusercontent.com/render/math?math=J=\sum_{j=1}^N\sum_{i=1}^c u_{ij}^m||x_j-x_v_i||^2"> (Chuang et al.). Here, <img src="https://render.githubusercontent.com/render/math?math=u_{i,j}"> is the representation of the membership of the pixel <img src="https://render.githubusercontent.com/render/math?math=x_j"> in cluster i, with <img src="https://render.githubusercontent.com/render/math?math=v-i"> being the center of the <img src="https://render.githubusercontent.com/render/math?math=i^{th}"> cluster (Chuang, et al.). This means that the probability of membership is dependent upon the distance between the pixel and the center of the cluster it is assigned to (Chuang et al.).The membership function is updated iteratively with this function:  <img src="https://render.githubusercontent.com/render/math?math=u_{ij}=\frac{1}{\sum_{k=1}^c \(\frac{||x_j-v_i||}{||x_j-v_k||})^{2/(m-1)\}}">
+In general, clustering looks at "hard" boundaries between the subgroups, which means that pixels are only allowed to belong to a single cluster (Bezdeck et. al.). In fuzzy clustering we extend our definition of clustering to include a membership function, which allows for pixels to be assigned to different clusters with different probabilities (Chuang et al.). This is different from most other clustering algorithms, as spectral clustering and k-means use hard boundaries (Chuang et al.). The use of fuzzy c-means can be helpful, as the algorithm yields the probability that pixels belong to a given cluster, so we can observe the likelihood of pixels being classified into a given cluster  (Chuang et al.).  We have  <img src="https://render.githubusercontent.com/render/math?math=X=(x_1,...,x_N)">, where <img src="https://render.githubusercontent.com/render/math?math=J=N"> is the number of pixels to be partitioned and c is the number of clusters (Chuang et al.). The algorithm performs optimization by minimizing the objective function <img src="https://render.githubusercontent.com/render/math?math=J=\sum_{j=1}^N\sum_{i=1}^c u_{ij}^m||x_j-x_v_i||^2"> (Chuang et al.). Here, <img src="https://render.githubusercontent.com/render/math?math=u_{i,j}"> is the representation of the membership of the pixel <img src="https://render.githubusercontent.com/render/math?math=x_j"> in cluster i, with <img src="https://render.githubusercontent.com/render/math?math=v_i"> being the center of the <img src="https://render.githubusercontent.com/render/math?math=i^{th}"> cluster (Chuang, et al.). This means that the probability of membership is dependent upon the distance between the pixel and the center of the cluster it is assigned to (Chuang et al.).The membership function is updated iteratively with this function:  <img src="https://render.githubusercontent.com/render/math?math=u_{ij}=\frac{1}{\sum_{k=1}^c (\frac{||x_j-v_i||}{||x_j-v_k||})^{2/(m-1)}}">
 , while the cluster centers are updated with the function: <img src="https://render.githubusercontent.com/render/math?math=v_i=\frac{\sum_{j=1}^N u_{ij}^m x_j}{\sum_{j=1}^N u_{ij}^m}">  (Chuang et al.). This algorithm generally converges to a saddle point, or a locally optimal solution (Chuang et al.).  
 Fuzzy C-Means has been proven to perform well for medical data and even for images that are deemed to be “bad” and “corrupt” (Norouzi et al.). This is due to the fact that usually there are pixels that could probably be assigned to several different clusters in images that are gray-scale (Norouzi et al.). The use of fuzzy-c-means improves flexibility by allowing a sort of “overlap” in these images to be accounted for when segmenting images by looking at the probability of a pixel’s membership in each cluster (Norouzi et al.). This algorithm is also sensitive to noise to differences in intensity of pixels (Norouzi et al.). Neighboring pixels in an image are highly correlated with each other, so the information in surrounding pixels can be important in forming clusters, which is not taken into account unless we use fuzzy c-means (Chuang et al.). But, because this algorithm returns the probability of a pixel belonging to a cluster, rather than a discrete cluster membership, the results can be less straightforward in terms of interpretation (Chuang et al.). Further, because k probabilities need to be calculated for each pixel, this algorithm can take quite a bit of time: thus, in our examples below and in our app, images are rescaled as described in the spectral clustering section of this post before Fuzzy-C-Means is applied.
 
@@ -112,69 +113,71 @@ We note that the resulting output of this algorithm are the probabilities of mem
 
 Above, we discussed three different algorithms, k-means, spectral clustering, and fuzzy c-means clustering, and their applications to image segmentation. In summary, k-means is computationally inexpensive, but its results can be limited by the randomness of initialization and its simpler methodology. Spectral clustering is able to better extract unusual patterns in images and find globally optimal solutions, but it falls prey to computational complexity and even forces us to limit the size of images in the applications we showed above. Fuzzy c-means allows for better exploration of images that contain noisy overlap, but it is sensitive to the intensity of pixels and outputs probabilities of cluster membership, making the results less straightforward, and also requires a rescaling of the images to speed up computation time. A disadvantage of all three methods is that the user has to select a number of clusters before the analysis. Thus, there are strengths and weaknesses to each method at both an algorithmic and practical level. In terms of applying these algorithms to images, spectral clustering was not able to segment the image of the brain well, but performed relatively well on the Birman cat. In contrast, k-means and fuzzy c-means performed decently in terms of segmenting the white part of Birmans body, but performed very well for the brain image, when the number of clusters is large enough. Fuzzy-c-means performed especially well for the noisier images, while all methods successfully segmented the high-contrast dog image.
 
-### Application and discussion
+### Application avilability
 Now that you have an understanding of the algorithms as well as their strengths and weaknesses, you can check out our [shiny app](https://timhedspeth1.shinyapps.io/imagesegmentationproject/). In this app, you can select from some existing examples or even upload your own image to see how these algorithms perform! You can also play with changing the number of clusters or the tuning parameter and neighborhood distance parameters in the spectral clustering algorithm to see how these affect the results. The [R file](function.R), containing the code used for the shiny app, is available to download here, for the sake of reproducibility!
 
-                                                 Works Cited 
+                                    Works Cited 
 
-Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy c-means clustering algorithm." Computers & geosciences 10.2-3
+Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1984): 191-203.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c-means clustering algorithm." Computers & geosciences 10.2-3(1984): 191-203.
 
-Burney, SM Aqil, and Humera Tariq. "K-means cluster analysis for image segmentation." International Journal of Computer Applications 96.4 
+Burney, SM Aqil, and Humera Tariq. "K-means cluster analysis for image 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2014).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segmentation." International Journal of Computer Applications 96.4 (2014).
 
-Chuang, Keh-Shih, et al. "Fuzzy c-means clustering with spatial information for image segmentation." computerized medical imaging and 
+Chuang, Keh-Shih, et al. "Fuzzy c-means clustering with spatial information for 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; graphics 30.1 (2006): 9-15.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; image segmentation." computerized medical imaging and graphics 30.1 (2006): 9-15.
 
 Dass, Rajeshwar, and Swapna Devi. "Image segmentation techniques 1." (2012).
  
-Dhanachandra, Nameirakpam, Khumanthem Manglem, and Yambem Jina Chanu. "Image segmentation using K-means clustering algorithm 
+Dhanachandra, Nameirakpam, Khumanthem Manglem, and Yambem Jina Chanu.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and subtractive clustering algorithm." Procedia Computer Science 54 (2015): 764-771.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Image segmentation using K-means clustering algorithm and subtractive clustering algorithm." Procedia Computer Science 54 (2015): 764-771.
 
-Gareth, James, et al. An Introduction to Statistical Learning with Applications in R, edited by Daniela Witten, 2nd ed., Springer , New York 
+Gareth, James, et al. An Introduction to Statistical Learning with Applications in R, 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Heidelberg Dordrecht London, 2013, pp. 385–399. Springer Texts in Statistics. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edited by Daniela Witten, 2nd ed., Springer , New York Heidelberg Dordrecht London, 2013, pp. 385–399. Springer Texts in Statistics. 
 
-Hassan, Noor Salah, et al. "Medical Images Breast Cancer Segmentation Based on K-Means Clustering Algorithm: A Review." Ultrasound 27 
+Hassan, Noor Salah, et al. "Medical Images Breast Cancer Segmentation Based on 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K-Means Clustering Algorithm: A Review." Ultrasound 27 (2021): 28.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2021): 28.
+Lalitha, M., M. Kiruthiga, and C. Loganathan. "A survey on image segmentation 
 
-Lalitha, M., M. Kiruthiga, and C. Loganathan. "A survey on image segmentation through clustering algorithm." International Journal of
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Science and Research 2.2 (2013): 348-358. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; through clustering algorithm." International Journal of Science and Research 2.2 (2013): 348-358. 
   
-Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatialspectral clustering for image segmentation." Neurocomputing 74.1-3 (2010): 461-471.
+Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatialspectral clustering for image 
 
-Norouzi, Alireza, et al. "Medical image segmentation methods, algorithms, and applications." IETE Technical Review 31.3 (2014): 199-213.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segmentation." Neurocomputing 74.1-3 (2010): 461-471.
 
-Parkhi, O. M., Vedaldi, A., Zisserman, A., & Jawahar, C. V. (2012, June). Cats and dogs. In 2012 IEEE conference on computer vision and 
+Norouzi, Alireza, et al. "Medical image segmentation methods, algorithms, and 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; applications." IETE Technical Review 31.3 (2014): 199-213.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pattern recognition (pp. 3498-3505). IEEE.
+Parkhi, O. M., Vedaldi, A., Zisserman, A., & Jawahar, C. V. (2012, June). Cats and 
 
-Suryanarayana, S. V., G. Venkateswara Rao, and G. Veereswara Swamy. "A Survey: Spectral Clustering Applications and its Enhancements." 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dogs. In 2012 IEEE conference on computer vision and pattern recognition (pp. 3498-3505). IEEE.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; International Journal of Computer Science and Information Technologies 6.1 (2015): 185-189.
+Suryanarayana, S. V., G. Venkateswara Rao, and G. Veereswara Swamy. "A Survey: 
 
-“T2-Weighted MRI .” Brain Imaging: What Are the Different Types?, Brainline, www.brainline.org/slideshow/brain-imaging-what-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spectral Clustering Applications and its Enhancements." International Journal of Computer Science and Information Technologies 6.1 (2015): 185-189.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are-different-types 
+“T2-Weighted MRI .” Brain Imaging: What Are the Different Types?, Brainline, 
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.brainline.org/slideshow/brain-imaging-what-are-different-types 
 
-Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral clustering for image segmentation." Pattern 
+Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Recognition 43.12 (2010): 4069-4076.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clustering for image segmentation." Pattern Recognition 43.12 (2010): 4069-4076.
 
-“Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r
+“Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.”
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -bloggers.com/2012/02/unsupervised-image-segmentation-with-spectral-clustering-with-r/. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; R-Bloggers, 12 Feb. 2012, https://www.r-bloggers.com/2012/02/unsupervised-image-segmentation-with-spectral-clustering-with-r/. 
 
-Vijay, J., and Jagu Subhashini. "An efficient brain tumor detection methodology using K-means clustering algoriftnn." 2013 International 
+Vijay, J., and Jagu Subhashini. "An efficient brain tumor detection methodology 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conference on communication and signal processing. IEEE, 2013.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; using K-means clustering algoriftnn." 2013 International conference on communication and signal processing. IEEE, 2013.
 
-Zhang, Xiangrong, et al. "Spectral clustering ensemble applied to SAR image segmentation." IEEE Transactions on Geoscience and Remote 
+Zhang, Xiangrong, et al. "Spectral clustering ensemble applied to SAR image 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sensing 46.7 (2008): 2126-2136.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segmentation." IEEE Transactions on Geoscience and Remote Sensing 46.7 (2008): 2126-2136.
