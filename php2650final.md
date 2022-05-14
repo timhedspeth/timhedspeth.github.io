@@ -112,7 +112,7 @@ We note that the resulting output of this algorithm are the probabilities of mem
 
 ### Overall Comparisons
 
-Above, we discussed three different algorithms, k-means, spectral clustering, and fuzzy c-means clustering, and their applications to image segmentation. In summary, k-means is computationally inexpensive, but its results can be limited by the randomness of initialization and its simpler methodology. Spectral clustering is able to better extract unusual patterns in images and find globally optimal solutions, but it falls prey to computational complexity and even forces us to limit the size of images in the applications we showed above. Fuzzy c-means allows for better exploration of images that contain noisy overlap, but it is sensitive to the intensity of pixels and outputs probabilities of cluster membership, making the results less straightforward, and also requires a rescaling of the images to speed up computation time. A disadvantage of all three methods is that the user has to select a number of clusters before the analysis. Thus, there are strengths and weaknesses to each method at both an algorithmic and practical level. In terms of applying these algorithms to images, spectral clustering was not able to segment the image of the brain well, but performed relatively well on the Birman cat. In contrast, k-means and fuzzy c-means performed decently in terms of segmenting the white part of Birmans body, but performed very well for the brain image, when the number of clusters is large enough. Fuzzy-c-means performed especially well for the noisier images, while all methods successfully segmented the high-contrast dog image.
+Above, we discussed three different algorithms, k-means, spectral clustering, and fuzzy c-means clustering, and their applications to image segmentation. In summary, k-means is computationally inexpensive, but its results can be limited by the randomness of initialization and its simpler methodology (Norouzi, et al.;Vijay and Subhashini). Spectral clustering is able to better extract unusual patterns in images and find globally optimal solutions, but it falls prey to computational complexity and even forces us to limit the size of images in the applications we showed above(Liu et al.; Tung et al.; Zhang et al.). Fuzzy c-means allows for better exploration of images that contain noisy overlap, but it is sensitive to the intensity of pixels and outputs probabilities of cluster membership, making the results less straightforward, and also requires a rescaling of the images to speed up computation time (Chuang et al.; Norouzi et al.). A disadvantage of all three methods is that the user has to select a number of clusters before the analysis. Thus, there are strengths and weaknesses to each method at both an algorithmic and practical level. In terms of applying these algorithms to images, spectral clustering was not able to segment the image of the brain well, but performed relatively well on the Birman cat. In contrast, k-means and fuzzy c-means performed decently in terms of segmenting the white part of Birmans body, but performed very well for the brain image, when the number of clusters is large enough. Fuzzy-c-means performed especially well for the noisier images, while all methods successfully segmented the high-contrast dog image.
 
 ### Application avilability
 Now that you have an understanding of the algorithms as well as their strengths and weaknesses, you can check out our [shiny app](https://timhedspeth1.shinyapps.io/imagesegmentationproject/). In this app, you can select from some existing examples or even upload your own image to see how these algorithms perform! You can also play with changing the number of clusters or the tuning parameter and neighborhood distance parameters in the spectral clustering algorithm to see how these affect the results. The [R file](function.R), containing the code used for the shiny app, is available to download here, for the sake of reproducibility!
@@ -120,65 +120,62 @@ Now that you have an understanding of the algorithms as well as their strengths 
                                     Works Cited 
 
 Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c-means clustering algorithm." Computers & geosciences 10.2-3(1984): 191-203.
 
 Burney, SM Aqil, and Humera Tariq. "K-means cluster analysis for image 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segmentation." International Journal of Computer Applications 96.4 (2014).
 
 Chuang, Keh-Shih, et al. "Fuzzy c-means clustering with spatial information for 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; image segmentation." computerized medical imaging and graphics 30.1 (2006): 9-15.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; image segmentation." computerized medical imaging and graphics 30.1 (2006):
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9-15.
 
 Dass, Rajeshwar, and Swapna Devi. "Image segmentation techniques 1." (2012).
  
 Dhanachandra, Nameirakpam, Khumanthem Manglem, and Yambem Jina Chanu.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Image segmentation using K-means clustering algorithm and subtractive clustering algorithm." Procedia Computer Science 54 (2015): 764-771.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Image segmentation using K-means clustering algorithm and subtractive 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clustering algorithm." Procedia Computer Science 54 (2015): 764-771.
 
 Gareth, James, et al. An Introduction to Statistical Learning with Applications in R, 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edited by Daniela Witten, 2nd ed., Springer , New York Heidelberg Dordrecht London, 2013, pp. 385–399. Springer Texts in Statistics. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; edited by Daniela Witten, 2nd ed., Springer , New York Heidelberg Dordrecht 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;London, 2013, pp. 385–399. Springer Texts in Statistics. 
 
 Hassan, Noor Salah, et al. "Medical Images Breast Cancer Segmentation Based on 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K-Means Clustering Algorithm: A Review." Ultrasound 27 (2021): 28.
 
 Lalitha, M., M. Kiruthiga, and C. Loganathan. "A survey on image segmentation 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; through clustering algorithm." International Journal of Science and Research 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2 (2013): 348-358. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; through clustering algorithm." International Journal of Science and Research 2.2 (2013): 348-358. 
-
-Landgraf, Andrew. “Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r-bloggers.com/2012/02/unsupervised-image-segmentation-with-spectral-clustering-with-r/. 
+Landgraf, Andrew. “Unsupervised Image Segmentation with Spectral Clustering
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r-bloggers.com/2012/02/unsupervised-image-segmentation-with-spectral-clustering-with-r/. 
 
 
 Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatialspectral clustering for image 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segmentation." Neurocomputing 74.1-3 (2010): 461-471.
 
 Norouzi, Alireza, et al. "Medical image segmentation methods, algorithms, and 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; applications." IETE Technical Review 31.3 (2014): 199-213.
 
 Parkhi, O. M., Vedaldi, A., Zisserman, A., & Jawahar, C. V. (2012, June). Cats and 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dogs. In 2012 IEEE conference on computer vision and pattern recognition (pp. 3498-3505). IEEE.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dogs. In 2012 IEEE conference on computer vision and pattern recognition
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (pp. 3498-3505). IEEE.
 
 Suryanarayana, S. V., G. Venkateswara Rao, and G. Veereswara Swamy. "A Survey: 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spectral Clustering Applications and its Enhancements." International Journal of Computer Science and Information Technologies 6.1 (2015): 185-189.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Spectral Clustering Applications and its Enhancements." International Journal 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of Computer Science and Information Technologies 6.1 (2015): 185-189.
 
 “T2-Weighted MRI .” Brain Imaging: What Are the Different Types?, Brainline, 
- 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; www.brainline.org/slideshow/brain-imaging-what-are-different-types 
 
 Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clustering for image segmentation." Pattern Recognition 43.12 (2010): 4069-4076.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clustering for image segmentation." Pattern Recognition 43.12 (2010): 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4069-4076.
 
 
 Vijay, J., and Jagu Subhashini. "An efficient brain tumor detection methodology 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; using K-means clustering algoriftnn." 2013 International conference on communication and signal processing. IEEE, 2013.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; using K-means clustering algoriftnn." 2013 International conference on 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; communication and signal processing. IEEE, 2013.
 
 Zhang, Xiangrong, et al. "Spectral clustering ensemble applied to SAR image 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segmentation." IEEE Transactions on Geoscience and Remote Sensing 46.7 (2008): 2126-2136.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; segmentation." IEEE Transactions on Geoscience and Remote Sensing 46.7 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2008): 2126-2136.
