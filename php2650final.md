@@ -130,7 +130,7 @@ Hassan, Noor Salah, et al. "Medical Images Breast Cancer Segmentation Based on K
 
 Lalitha, M., M. Kiruthiga, and C. Loganathan. "A survey on image segmentation through clustering algorithm." International Journal of &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Science and Research 2.2 (2013): 348-358. Landgraf, Andrew. 
   
-“Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r-bloggers.com/2012/02/unsupervised-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; image-segmentation-with-spectral-clustering-with-r/. Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spectral clustering for image segmentation." Neurocomputing 74.1-3 (2010): 461-471.
+Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spectral clustering for image segmentation." Neurocomputing 74.1-3 (2010): 461-471.
 
 Norouzi, Alireza, et al. "Medical image segmentation methods, algorithms, and applications." IETE Technical Review 31.3 (2014): 199-213.
 
@@ -138,9 +138,13 @@ Parkhi, O. M., Vedaldi, A., Zisserman, A., & Jawahar, C. V. (2012, June). Cats a
 
 Suryanarayana, S. V., G. Venkateswara Rao, and G. Veereswara Swamy. "A Survey: Spectral Clustering Applications and its Enhancements." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; International Journal of Computer Science and Information Technologies 6.1 (2015): 185-189.
 
-“T2-Weighted MRI .” Brain Imaging: What Are the Different Types?, Brainline, https://www.brainline.org/slideshow/brain-imaging-what-are-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; different-types. 
+“T2-Weighted MRI .” Brain Imaging: What Are the Different Types?, Brainline, https://www.brainline.org/slideshow/brain-imaging-what- 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; are-different-types. 
 
 Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral clustering for image segmentation." Pattern Recognition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  43.12 (2010): 4069-4076.
+
+“Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r-bloggers.com/2012/02/unsupervised-image-segmentation-with-spectral-clustering-with-r/. 
 
 Vijay, J., and Jagu Subhashini. "An efficient brain tumor detection methodology using K-means clustering algoriftnn." 2013 International &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conference on communication and signal processing. IEEE, 2013.
 
