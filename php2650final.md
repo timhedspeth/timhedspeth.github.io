@@ -1,5 +1,5 @@
 ---
-title: "Clustering"
+title: "Image Segmentation through Clustering"
 ---
 
 #### Project by Joanna Walsh and Timothy Hedspeth for PHP 2650
