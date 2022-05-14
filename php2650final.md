@@ -114,45 +114,34 @@ Now that you have an understanding of the algorithms as well as their strengths 
 
                                                            Works Cited 
 
-Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy c-means clustering algorithm." Computers & geosciences 10.2-3 (1984): 191-203.
+Bezdek, James C., Robert Ehrlich, and William Full. "FCM: The fuzzy c-means clustering algorithm." Computers & geosciences 10.2-3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (1984): 191-203.
 
-Burney, SM Aqil, and Humera Tariq. "K-means cluster analysis for image segmentation." International Journal of Computer Applications 96.4 (2014).
+Burney, SM Aqil, and Humera Tariq. "K-means cluster analysis for image segmentation." International Journal of Computer Applications 96.4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2014).
 
-Chuang, Keh-Shih, et al. "Fuzzy c-means clustering with spatial information for image segmentation." computerized medical imaging and graphics 30.1   
-  (2006): 9-15.
+Chuang, Keh-Shih, et al. "Fuzzy c-means clustering with spatial information for image segmentation." computerized medical imaging and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; graphics 30.1 (2006): 9-15.
 
 Dass, Rajeshwar, and Swapna Devi. "Image segmentation techniques 1." (2012).
  
-Dhanachandra, Nameirakpam, Khumanthem Manglem, and Yambem Jina Chanu. "Image segmentation using K-means clustering algorithm and subtractive clustering 
-  algorithm." Procedia Computer Science 54 (2015): 764-771.
+Dhanachandra, Nameirakpam, Khumanthem Manglem, and Yambem Jina Chanu. "Image segmentation using K-means clustering algorithm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and subtractive clustering algorithm." Procedia Computer Science 54 (2015): 764-771.
 
-Gareth, James, et al. An Introduction to Statistical Learning with Applications in R, edited by Daniela Witten, 2nd ed., Springer , New York Heidelberg 
-  Dordrecht London, 2013, pp. 385–399. Springer Texts in Statistics. 
+Gareth, James, et al. An Introduction to Statistical Learning with Applications in R, edited by Daniela Witten, 2nd ed., Springer , New York &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Heidelberg Dordrecht London, 2013, pp. 385–399. Springer Texts in Statistics. 
 
-Hassan, Noor Salah, et al. "Medical Images Breast Cancer Segmentation Based on K-Means Clustering Algorithm: A Review." Ultrasound 27 (2021): 28.
+Hassan, Noor Salah, et al. "Medical Images Breast Cancer Segmentation Based on K-Means Clustering Algorithm: A Review." Ultrasound 27 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (2021): 28.
 
-Lalitha, M., M. Kiruthiga, and C. Loganathan. "A survey on image segmentation through clustering algorithm." International Journal of Science and Research 
-  2.2 (2013): 348-358. Landgraf, Andrew. 
+Lalitha, M., M. Kiruthiga, and C. Loganathan. "A survey on image segmentation through clustering algorithm." International Journal of &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Science and Research 2.2 (2013): 348-358. Landgraf, Andrew. 
   
-“Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, 
-  https://www.r-bloggers.com/2012/02/unsupervised-image-segmentation-with-spectral-clustering-with-r/. 
-  Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatial spectral clustering for image segmentation." Neurocomputing 74.1-3 (2010): 461-471.
+“Unsupervised Image Segmentation with Spectral Clustering with R: R-Bloggers.” R-Bloggers, 12 Feb. 2012, https://www.r-bloggers.com/2012/02/unsupervised-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; image-segmentation-with-spectral-clustering-with-r/. Liu, H. Q., L. C. Jiao, and Feng Zhao. "Non-local spatial &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; spectral clustering for image segmentation." Neurocomputing 74.1-3 (2010): 461-471.
 
 Norouzi, Alireza, et al. "Medical image segmentation methods, algorithms, and applications." IETE Technical Review 31.3 (2014): 199-213.
 
-Parkhi, O. M., Vedaldi, A., Zisserman, A., & Jawahar, C. V. (2012, June). Cats and dogs. In 2012 IEEE conference on computer vision and pattern 
-  recognition (pp. 3498-3505). IEEE.
+Parkhi, O. M., Vedaldi, A., Zisserman, A., & Jawahar, C. V. (2012, June). Cats and dogs. In 2012 IEEE conference on computer vision and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pattern recognition (pp. 3498-3505). IEEE.
 
-Suryanarayana, S. V., G. Venkateswara Rao, and G. Veereswara Swamy. "A Survey: Spectral Clustering Applications and its Enhancements." International 
-  Journal of Computer Science and Information Technologies 6.1 (2015): 185-189.
+Suryanarayana, S. V., G. Venkateswara Rao, and G. Veereswara Swamy. "A Survey: Spectral Clustering Applications and its Enhancements." &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; International Journal of Computer Science and Information Technologies 6.1 (2015): 185-189.
 
-“T2-Weighted MRI .” Brain Imaging: What Are the Different Types?, Brainline, https://www.brainline.org/slideshow/brain-imaging-what-are-different-types. 
+“T2-Weighted MRI .” Brain Imaging: What Are the Different Types?, Brainline, https://www.brainline.org/slideshow/brain-imaging-what-are-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; different-types. 
 
-Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral clustering for image segmentation." Pattern Recognition 43.12 (2010): 
-  4069-4076.
+Tung, Frederick, Alexander Wong, and David A. Clausi. "Enabling scalable spectral clustering for image segmentation." Pattern Recognition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  43.12 (2010): 4069-4076.
 
-Vijay, J., and Jagu Subhashini. "An efficient brain tumor detection methodology using K-means clustering algoriftnn." 2013 International conference on    
-  communication and signal processing. IEEE, 2013.
+Vijay, J., and Jagu Subhashini. "An efficient brain tumor detection methodology using K-means clustering algoriftnn." 2013 International &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conference on communication and signal processing. IEEE, 2013.
 
-Zhang, Xiangrong, et al. "Spectral clustering ensemble applied to SAR image segmentation." IEEE Transactions on Geoscience and Remote Sensing 46.7 (2008): 
-  2126-2136.
+Zhang, Xiangrong, et al. "Spectral clustering ensemble applied to SAR image segmentation." IEEE Transactions on Geoscience and Remote &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sensing 46.7 (2008): 2126-2136.
