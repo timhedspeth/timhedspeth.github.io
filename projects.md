@@ -15,9 +15,9 @@ During the summer between my junior and senior year of undergraduate I was able 
 For this project we were required to create a shiny app in small groups based on a publication. Our group created an app based on the paper [A discrete epidemic model for SARS transmission and control in China](https://doi.org/10.1016/j.mcm.2005.01.007). We took the model proposed by the researchers and created a generalized version where researchers can set the parameters by themself. In this project I was primarily responsible for coding the user interface and connecting it with the simulation code written by my partners. The app is avilable [here](https://nliux.shinyapps.io/PHP2560-Shiny-Final-Project/)
 
 ### Statistical Learning and Big Data Final project (PHP 2650)
-This project is an extenstion of a topic that we learned in class, clustering. This project is an estentstion of clustering, where different clustering algorithims were explored regarding image segmentation. In this work we not only present a high level summary of the mathematics behind these methods, but we also created a [shiny web](https://timhedspeth1.shinyapps.io/imagesegmentationproject/) which is avilable to demonstrate these methods in action with your own image! 
+This [project](php2650final.md) is an extenstion of a topic that we learned in class, clustering. This project is an estentstion of clustering, where different clustering algorithims were explored regarding image segmentation. In this work we not only present a high level summary of the mathematics behind these methods, but we also created a [shiny web](https://timhedspeth1.shinyapps.io/imagesegmentationproject/) which is avilable to demonstrate these methods in action with your own image! 
 
-[Project](php2650final.md)
+
 
 # Internships 
 For the summer of 2022 I worked as a Data Science Intern for the Adavanced Analytics division of Citizens Bank. I worked on a team to better understand the patterns of customers who were engaging with different channels. 
